@@ -19,18 +19,20 @@
 </p>
 
 <p align="center">
-  <img src="assets/figure2_architecture.png" alt="Overview" width="90%">
+  <img src="assets/figure2_architecture.png" alt="Overview of DA-FSS" width="90%">
 </p>
 
 ## 🌟 Highlights
 
-We identify a critical **"Plasticity-Stability Dilemma"** in existing multimodal paradigms and propose **DA-FSS**:
-- **Decoupled-experts Arbitration**: A novel architecture that physically separates geometric adaptation (Plasticity) and semantic preservation (Stability) into **Parallel Experts**
-- **Gradient Harmony**: Introducing the **Decoupled Alignment Module (DAM)** with Prototype Loss Regularization (PLR) to align experts without propagating confusion noise
-- **Smart Arbitration**: A **Stacked Arbitration Module (SAM)** that effectively fuses decoupled pathways using boundary-injected guidance
-- **SOTA Performance**: Superior performance over MM-FSS on **S3DIS (+1.16%)** and **ScanNet (+1.00%)**, solving semantic blindness with a massive **+10.9% mAcc** gain
+We identify a critical **"Plasticity-Stability Dilemma"** in existing "Fuse-then-Refine" multimodal paradigms, where semantic gradients dominate geometric adaptation. To address this, we present **DA-FSS**:
+
+- [cite_start]**Decoupled-experts Arbitration**: We propose a novel architecture that physically separates geometric adaptation (Plasticity) and semantic preservation (Stability) into **Parallel Experts**[cite: 37, 42].
+- [cite_start]**Gradient Harmony**: We introduce the **Decoupled Alignment Module (DAM)**, utilizing Prototype Loss Regularization (PLR) and Decoupled Consistency Regularization (DCR) to align experts without propagating confusion noise[cite: 43, 372, 386].
+- [cite_start]**Smart Arbitration**: A **Stacked Arbitration Module (SAM)** is designed to effectively fuse the decoupled pathways using boundary-injected guidance, preventing the suppression of structural details[cite: 41, 403].
+- [cite_start]**SOTA Performance**: DA-FSS outperforms the strong baseline (MM-FSS) on **S3DIS** and **ScanNet** datasets while using fewer parameters (-0.27M) and FLOPs (-0.30G)[cite: 531, 567].
 
 ## 📝 Citation
+
 If you find our code or paper useful, please cite:
 
 ```bibtex
@@ -40,35 +42,114 @@ If you find our code or paper useful, please cite:
   booktitle={Under Review},
   year={2025}
 }
-🛠️ Environment SetupOur environment has been tested on:RTX 3090 GPUsGCC 6.3.0Follow the COSeg installation guide for detailed setup.📦 Dataset PreparationPretraining Stage DataWe strictly follow the MM-FSS protocol. You can directly download the ScanNet 3D dataset and 2D features for pretraining:Bash# Download ScanNet 3D dataset
+```
+
+---
+
+## 🛠️ Environment Setup
+
+Our environment has been tested on:
+- **GPU**: NVIDIA RTX 3090 / A100
+- **Compiler**: GCC 6.3.0
+- **Framework**: PyTorch 1.10+
+
+Follow the [COSeg installation guide](https://github.com/ZhaochongAn/COSeg?tab=readme-ov-file#environment) for detailed setup.
+
+## 📦 Dataset Preparation
+
+### Pretraining Stage Data
+We follow the MM-FSS protocol. [cite_start]You can directly download the ScanNet 3D dataset and 2D features for pretraining[cite: 328, 329]:
+
+```bash
+# Download ScanNet 3D dataset
 wget [https://cvg-data.inf.ethz.ch/openscene/data/scannet_processed/scannet_3d.zip](https://cvg-data.inf.ethz.ch/openscene/data/scannet_processed/scannet_3d.zip)
 unzip scannet_3d.zip
 
 # Download 2D features
 wget [https://cvg-data.inf.ethz.ch/openscene/data/scannet_multiview_lseg.zip](https://cvg-data.inf.ethz.ch/openscene/data/scannet_multiview_lseg.zip)
 unzip scannet_multiview_lseg.zip
-You should put the unpacked data into the folder ./pretraining/data/ or link to the corresponding data folder with the symbolic link:Bashln -s /PATH/TO/DOWNLOADED/FOLDER ./pretraining/data
-Few-shot Stage DataOption 1: Direct Download (Recommended)Download our preprocessed datasets (same as Baseline):DatasetFew-shot Stage DataS3DISDownloadScanNetDownloadOption 2: Manual PreprocessingFollow COSeg preprocessing instructions.The processed data will be in [PATH_to_DATASET_processed_data]/blocks_bs1_s1/data. Make sure to update the data_root entry in the .yaml config file.🔄 Training Pipeline1. Backbone and IF Head PretrainingOption A: Download MM-FSS official weights (Recommended, as we reuse the alignment).Option B: Train from scratch:Bashcd pretraining
+```
+
+Link the data folder:
+```bash
+ln -s /PATH/TO/DOWNLOADED/FOLDER ./pretraining/data
+```
+
+### Few-shot Stage Data
+[cite_start]We use the standard S3DIS and ScanNet few-shot splits[cite: 480].
+
+| Dataset | Download Link |
+|:-------:|:-------------:|
+| S3DIS | [Download Processed Data](https://drive.google.com/file/d/1frJ8nf9XLK_fUBG4nrn8Hbslzn7914Ru/view?usp=drive_link) |
+| ScanNet | [Download Processed Data](https://drive.google.com/file/d/19yESBZumU-VAIPrBr8aYPaw7UqPia4qH/view?usp=drive_link) |
+
+Ensure your `.yaml` config file points to `[PATH_to_DATASET]/blocks_bs1_s1/data`.
+
+## 🔄 Training Pipeline
+
+### 1. Backbone and IF Head Pretraining
+[cite_start]Our DA-FSS efficiently reuses the pre-trained alignment from the baseline (MM-FSS) to avoid extra overhead[cite: 149].
+
+**Option A**: Download our pretrained weights [here](https://drive.google.com/drive/u/1/folders/1JoeAXJh1AZM3bM0KGBJQsFTad6uqpzUJ).
+
+**Option B**: Train from scratch:
+```bash
+cd pretraining
 bash run/distill_strat.sh PATH_to_SAVE_BACKBONE config/scannet/ours_lseg_strat.yaml
-2. Meta-learning Stage (DA-FSS)Set config config/[CONFIG_FILE] to be s3dis_DAFSS.yaml or scannet_DAFSS.yaml.Adjust cvfold, n_way, and k_shot according to your few-shot task:Bash# For 1-way tasks (Example: S3DIS)
-python3 main_fs.py --config config/[CONFIG_FILE] \
-    save_path [PATH_to_SAVE_MODEL] \
-    pretrain_backbone [PATH_to_SAVED_BACKBONE] \
-    cvfold [CVFOLD] \
+```
+
+### 2. Meta-learning Stage (DA-FSS)
+Train the Decoupled-experts Arbitration model. [cite_start]We freeze the backbone to maintain stability[cite: 330].
+
+**Key Settings**:
+- [cite_start]`SAM Layers`: N=1 (S3DIS), N=2 (ScanNet) [cite: 520]
+- [cite_start]`DAM Weights`: $\lambda_{PLR}=0.001$, $\lambda_{DCR}=0.5$ [cite: 521]
+
+```bash
+# For 1-way tasks (Example: S3DIS)
+python3 main_fs.py --config config/s3dis_DAFSS.yaml \
+    save_path logs/s3dis/1w1s \
+    pretrain_backbone checkpoints/backbone_weights.pth \
+    cvfold 0 \
     n_way 1 \
-    k_shot [K_SHOT] \
+    k_shot 1 \
     num_episode_per_comb 1000
 
 # For 2-way tasks (Example: ScanNet)
-python3 main_fs.py --config config/[CONFIG_FILE] \
-    save_path [PATH_to_SAVE_MODEL] \
-    pretrain_backbone [PATH_to_SAVED_BACKBONE] \
-    cvfold [CVFOLD] \
+python3 main_fs.py --config config/scannet_DAFSS.yaml \
+    save_path logs/scannet/2w5s \
+    pretrain_backbone checkpoints/backbone_weights.pth \
+    cvfold 0 \
     n_way 2 \
-    k_shot [K_SHOT] \
+    k_shot 5 \
     num_episode_per_comb 100
-Note: For DA-FSS specific hyperparameters, we set SAM Layers=1 for S3DIS and SAM Layers=2 for ScanNet. PLR weight is set to 0.001.📊 Evaluation & VisualizationModel EvaluationModify cvfold, n_way, k_shot accordingly and run:Bashpython3 main_fs.py --config config/[CONFIG_FILE] \
+```
+
+## 📊 Evaluation
+
+[cite_start]We strictly follow the N-way K-shot episodic evaluation protocol[cite: 506].
+
+```bash
+python3 main_fs.py --config config/scannet_DAFSS.yaml \
     test True \
     eval_split test \
-    weight [PATH_to_SAVED_MODEL]
-Quantitative Comparison (Strict Control)DatasetSettingMM-FSS (Baseline)DA-FSS (Ours)GainS3DIS1-way 1-shot48.5049.14+0.64%S3DIS1-way 5-shot55.8456.43+0.59%ScanNet1-way 1-shot44.4645.46+1.00%ScanNet2-way 5-shot44.2045.53+1.33%VisualizationFollow COSeg visualization guide for high-quality visualization results.🎯 Model ZooModelDatasetCVFOLDN-way K-shotWeightsdafss_s30_1w1sS3DIS01-way 1-shotDownloaddafss_s30_1w5sS3DIS01-way 5-shotDownloaddafss_s30_2w1sS3DIS02-way 1-shotDownloaddafss_s30_2w5sS3DIS02-way 5-shotDownloaddafss_sc0_1w1sScanNet01-way 1-shotDownloaddafss_sc0_1w5sScanNet01-way 5-shotDownloaddafss_sc0_2w1sScanNet02-way 1-shotDownloaddafss_sc0_2w5sScanNet02-way 5-shotDownloadContactFor any questions or issues, feel free to reach out!Email: [Your Email Here]Join in our Communication Group (WeChat):<div style="text-align: left;"><img src="assets/wechat_qr.png" width="200"/></div>
+    weight logs/scannet/1w1s/best_model.pth \
+    n_way 1 \
+    k_shot 1
+```
+
+
+
+## 🎯 Model Zoo
+
+| Model | Dataset | CVFOLD | N-way K-shot | Weights |
+|:-------:|:---------:|:--------:|:------------:|:----------:|
+| dafss_s30_1w1s | S3DIS | 0 | 1-way 1-shot | [Download](#) |
+| dafss_s30_1w5s | S3DIS | 0 | 1-way 5-shot | [Download](#) |
+| dafss_sc0_1w1s | ScanNet | 0 | 1-way 1-shot | [Download](#) |
+| dafss_sc0_2w5s | ScanNet | 0 | 2-way 5-shot | [Download](#) |
+
+## 📧 Contact
+
+For any questions, feel free to reach out:
+- **Email**: anzhaochong@outlook.com
