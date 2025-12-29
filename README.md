@@ -87,7 +87,7 @@ Ensure your `.yaml` config file points to `[PATH_to_DATASET]/blocks_bs1_s1/data`
 ```bash
 cd pretraining
 bash run/distill_strat.sh PATH_to_SAVE_BACKBONE config/scannet/ours_lseg_strat.yaml
-
+```
 
 ### 2. Meta-learning Stage
 Set config `config/[CONFIG_FILE]` to be `s3dis_COSeg_fs.yaml` or `scannetv2_COSeg_fs.yaml` for training on S3DIS or ScanNet respectively.
@@ -115,6 +115,9 @@ python3 main_fs.py --config config/[CONFIG_FILE] \
 
 > **Note**: Following [COSeg](https://github.com/ZhaochongAn/COSeg?tab=readme-ov-file#training-pipeline), `num_episode_per_comb` defaults to 1000 for 1-way and 100 for 2-way tasks to maintain consistency in test set size.
 
+## 📊 Evaluation & Visualization
+
+
 ### Model Evaluation
 Modify `cvfold`, `n_way`, `k_shot` and `num_episode_per_comb` accordingly and run:
 ```bash
@@ -129,6 +132,7 @@ python3 main_fs.py --config config/[CONFIG_FILE] \
 
 ### Visualization
 Follow [COSeg visualization guide](https://github.com/ZhaochongAn/COSeg?tab=readme-ov-file#visualization) for high-quality visualization results.
+
 
 
 ## 🎯 Model Zoo
