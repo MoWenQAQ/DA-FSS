@@ -1,5 +1,5 @@
 """
-COSeg Training script.
+MM-FSS Training script.
 
 """
 
@@ -44,7 +44,7 @@ from util.logger import get_logger
 from util.lr import MultiStepWithWarmup, PolyLR
 from util.common_util import evaluate_metric, load_pretrain_checkpoint
 
-from model.mm_fss import MM_FSS
+from model.da_fss import DA_FSS
 import wandb
 
 
