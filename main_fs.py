@@ -1,5 +1,5 @@
 """
-MM-FSS Training script.
+DA-FSS Training script.
 
 """
 
@@ -149,7 +149,7 @@ def main_worker(gpu, ngpus_per_node, argss):
             )
 
     # get model
-    model = MM_FSS(args)
+    model = DA_FSS(args)
 
     # set optimizer
     if args.optimizer == "SGD":
