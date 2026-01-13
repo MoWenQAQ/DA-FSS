@@ -6,7 +6,7 @@
     <a href="#"><strong>Anonymous Author 2</strong></a>
     ·
   </p>
-  <h2 align="center">CVPR/ICLR 2025 Submission (<a href="https://anonymous.4open.science/r/DA-FSS-765F/">Paper</a>)</h2>
+  <h2 align="center"> IJCAI-ECAI2026 Submission (<a href="https://anonymous.4open.science/r/DA-FSS-765F/">Paper</a>)</h2>
 </p>
 
 <p align="center">
