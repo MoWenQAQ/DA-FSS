@@ -27,11 +27,11 @@ We identify a critical **"Plasticity-Stability Dilemma"** in existing "Fuse-then
 If you find our code or paper useful, please cite:
 
 ```bibtex
-@inproceedings{dafss2025rethinking,
+@inproceedings{dafss2026rethinking,
   title={Rethinking Multimodal Few-Shot 3D Point Cloud Segmentation: From Fused Refinement to Decoupled Arbitration},
   author={Anonymous Authors},
   booktitle={Under Review},
-  year={2025}
+  year={2026}
 }
 ```
 
@@ -139,22 +139,22 @@ Follow [COSeg visualization guide](https://github.com/ZhaochongAn/COSeg?tab=read
 
 | Model | Dataset | CVFOLD | N-way K-shot | Weights |
 |:-------:|:---------:|:--------:|:------------:|:----------:|
-| s30_1w1s | S3DIS | 0 | 1-way 1-shot | [Download]() |
-| s30_1w5s | S3DIS | 0 | 1-way 5-shot | [Download]() |
-| s30_2w1s | S3DIS | 0 | 2-way 1-shot | [Download]() |
-| s30_2w5s | S3DIS | 0 | 2-way 5-shot | [Download]() |
-| s31_1w1s | S3DIS | 1 | 1-way 1-shot | [Download]() |
-| s31_1w5s | S3DIS | 1 | 1-way 5-shot | [Download]() |
-| s31_2w1s | S3DIS | 1 | 2-way 1-shot | [Download]() |
-| s31_2w5s | S3DIS | 1 | 2-way 5-shot | [Download]() |
-| sc0_1w1s | ScanNet | 0 | 1-way 1-shot | [Download]() |
-| sc0_1w5s | ScanNet | 0 | 1-way 5-shot | [Download]() |
-| sc0_2w1s | ScanNet | 0 | 2-way 1-shot | [Download]() |
-| sc0_2w5s | ScanNet | 0 | 2-way 5-shot | [Download]() |
-| sc1_1w1s | ScanNet | 1 | 1-way 1-shot | [Download]() |
-| sc1_1w5s | ScanNet | 1 | 1-way 5-shot | [Download]() |
-| sc1_2w1s | ScanNet | 1 | 2-way 1-shot | [Download]() |
-| sc1_2w5s | ScanNet | 1 | 2-way 5-shot | [Download]() |
+| s30_1w1s | S3DIS | 0 | 1-way 1-shot | [Download](https://drive.google.com/file/d/12ZA17paklh6-g4hZ6YJriSMyfnB4VdvR/view?usp=drive_link) |
+| s30_1w5s | S3DIS | 0 | 1-way 5-shot | [Download](https://drive.google.com/file/d/1ks1lGDYCh_IhpAq2St8p6UReqxvMOMHl/view?usp=drive_link) |
+| s30_2w1s | S3DIS | 0 | 2-way 1-shot | [Download](https://drive.google.com/file/d/1UoFxkwc0Kk1gG0JEO0qeo5wtSeDGw3vk/view?usp=drive_link) |
+| s30_2w5s | S3DIS | 0 | 2-way 5-shot | [Download](https://drive.google.com/file/d/1M_lapHHSOo4Q1ASseZLkTn7nkijh-5B6/view?usp=drive_link) |
+| s31_1w1s | S3DIS | 1 | 1-way 1-shot | [Download](https://drive.google.com/file/d/1QPqjOokUYN-sNf2PeiKRhk9nISBuRmpZ/view?usp=drive_link) |
+| s31_1w5s | S3DIS | 1 | 1-way 5-shot | [Download](https://drive.google.com/file/d/1UwZ6J9wUhSmWi4NDt8ydcoct9x-bbkCf/view?usp=drive_link) |
+| s31_2w1s | S3DIS | 1 | 2-way 1-shot | [Download](https://drive.google.com/file/d/1Bn__AgE3MpVyT17FgAB-1_PBupIOscyc/view?usp=drive_link) |
+| s31_2w5s | S3DIS | 1 | 2-way 5-shot | [Download](https://drive.google.com/file/d/1lQOsjnIftap1hjZBa8bfgDCaMdcofjy6/view?usp=drive_link) |
+| sc0_1w1s | ScanNet | 0 | 1-way 1-shot | [Download](https://drive.google.com/file/d/1JIqSZhcYRO99pkVyuU1cO_mmddLH8bro/view?usp=drive_link) |
+| sc0_1w5s | ScanNet | 0 | 1-way 5-shot | [Download](https://drive.google.com/file/d/1FKoIMPwNZgM6KUQMsP-tfak8Ak24UI-X/view?usp=drive_link) |
+| sc0_2w1s | ScanNet | 0 | 2-way 1-shot | [Download](https://drive.google.com/file/d/1ZzzEd0uFphYn_7d2pwgVDy8jj-2Mnz3x/view?usp=drive_link) |
+| sc0_2w5s | ScanNet | 0 | 2-way 5-shot | [Download](https://drive.google.com/file/d/1mQspSOKlMtwD0089CsKRavRuW4cvUmDm/view?usp=drive_link) |
+| sc1_1w1s | ScanNet | 1 | 1-way 1-shot | [Download](https://drive.google.com/file/d/1N-eFEEAYdjEvd80GFTjuqHyRY4xetgbE/view?usp=drive_link) |
+| sc1_1w5s | ScanNet | 1 | 1-way 5-shot | [Download](https://drive.google.com/file/d/1h626c9efZ0mK1iY0tUjlGZ1_GfZDha6Q/view?usp=drive_link) |
+| sc1_2w1s | ScanNet | 1 | 2-way 1-shot | [Download](https://drive.google.com/file/d/1QKdt1ubHSKUlx6ec-xkm0NXTOGUOUaT6/view?usp=drive_link) |
+| sc1_2w5s | ScanNet | 1 | 2-way 5-shot | [Download](https://drive.google.com/file/d/1oQsxvo05_NyPfNQfa-2XIqDaB1I4d1_V/view?usp=drive_link) |
 
 ## 📧 Contact
 
