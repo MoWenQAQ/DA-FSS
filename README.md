@@ -139,22 +139,22 @@ Follow [COSeg visualization guide](https://github.com/ZhaochongAn/COSeg?tab=read
 
 | Model | Dataset | CVFOLD | N-way K-shot | Weights |
 |:-------:|:---------:|:--------:|:------------:|:----------:|
-| s30_1w1s | S3DIS | 0 | 1-way 1-shot | [Download](https://drive.google.com/file/d/12ZA17paklh6-g4hZ6YJriSMyfnB4VdvR/view?usp=drive_link) |
-| s30_1w5s | S3DIS | 0 | 1-way 5-shot | [Download](https://drive.google.com/file/d/1ks1lGDYCh_IhpAq2St8p6UReqxvMOMHl/view?usp=drive_link) |
-| s30_2w1s | S3DIS | 0 | 2-way 1-shot | [Download](https://drive.google.com/file/d/1UoFxkwc0Kk1gG0JEO0qeo5wtSeDGw3vk/view?usp=drive_link) |
-| s30_2w5s | S3DIS | 0 | 2-way 5-shot | [Download](https://drive.google.com/file/d/1M_lapHHSOo4Q1ASseZLkTn7nkijh-5B6/view?usp=drive_link) |
-| s31_1w1s | S3DIS | 1 | 1-way 1-shot | [Download](https://drive.google.com/file/d/1QPqjOokUYN-sNf2PeiKRhk9nISBuRmpZ/view?usp=drive_link) |
-| s31_1w5s | S3DIS | 1 | 1-way 5-shot | [Download](https://drive.google.com/file/d/1UwZ6J9wUhSmWi4NDt8ydcoct9x-bbkCf/view?usp=drive_link) |
-| s31_2w1s | S3DIS | 1 | 2-way 1-shot | [Download](https://drive.google.com/file/d/1Bn__AgE3MpVyT17FgAB-1_PBupIOscyc/view?usp=drive_link) |
-| s31_2w5s | S3DIS | 1 | 2-way 5-shot | [Download](https://drive.google.com/file/d/1lQOsjnIftap1hjZBa8bfgDCaMdcofjy6/view?usp=drive_link) |
-| sc0_1w1s | ScanNet | 0 | 1-way 1-shot | [Download](https://drive.google.com/file/d/1JIqSZhcYRO99pkVyuU1cO_mmddLH8bro/view?usp=drive_link) |
-| sc0_1w5s | ScanNet | 0 | 1-way 5-shot | [Download](https://drive.google.com/file/d/1FKoIMPwNZgM6KUQMsP-tfak8Ak24UI-X/view?usp=drive_link) |
-| sc0_2w1s | ScanNet | 0 | 2-way 1-shot | [Download](https://drive.google.com/file/d/1ZzzEd0uFphYn_7d2pwgVDy8jj-2Mnz3x/view?usp=drive_link) |
-| sc0_2w5s | ScanNet | 0 | 2-way 5-shot | [Download](https://drive.google.com/file/d/1mQspSOKlMtwD0089CsKRavRuW4cvUmDm/view?usp=drive_link) |
-| sc1_1w1s | ScanNet | 1 | 1-way 1-shot | [Download](https://drive.google.com/file/d/1N-eFEEAYdjEvd80GFTjuqHyRY4xetgbE/view?usp=drive_link) |
-| sc1_1w5s | ScanNet | 1 | 1-way 5-shot | [Download](https://drive.google.com/file/d/1h626c9efZ0mK1iY0tUjlGZ1_GfZDha6Q/view?usp=drive_link) |
-| sc1_2w1s | ScanNet | 1 | 2-way 1-shot | [Download](https://drive.google.com/file/d/1QKdt1ubHSKUlx6ec-xkm0NXTOGUOUaT6/view?usp=drive_link) |
-| sc1_2w5s | ScanNet | 1 | 2-way 5-shot | [Download](https://drive.google.com/file/d/1oQsxvo05_NyPfNQfa-2XIqDaB1I4d1_V/view?usp=drive_link) |
+| s30_1w1s | S3DIS | 0 | 1-way 1-shot | [Download](https://drive.google.com/drive/folders/1uQTBh_S7lcufdnQxdNhSJWcE0zvyC8Sh?usp=drive_link) |
+| s30_1w5s | S3DIS | 0 | 1-way 5-shot | [Download](https://drive.google.com/drive/folders/1VgOxN7EvgR-1Y1r1-ms3byodmtHTH_wV?usp=drive_link) |
+| s30_2w1s | S3DIS | 0 | 2-way 1-shot | [Download](https://drive.google.com/drive/folders/1buuDCOa2pugddsUkHZGiQUPU9hn-0BiJ?usp=drive_link) |
+| s30_2w5s | S3DIS | 0 | 2-way 5-shot | [Download](https://drive.google.com/drive/folders/1LlIqN4x3axH4BkJhYzMdgkax6PsjDcnz?usp=drive_link) |
+| s31_1w1s | S3DIS | 1 | 1-way 1-shot | [Download](https://drive.google.com/drive/folders/1RAEXiWxb9XBd5Vb8LBfLBjPm9-TszzMk?usp=drive_link) |
+| s31_1w5s | S3DIS | 1 | 1-way 5-shot | [Download](https://drive.google.com/drive/folders/1ZFeeW9QUBB0OV9X1FRH7eEoOB-UVnYF-?usp=drive_link) |
+| s31_2w1s | S3DIS | 1 | 2-way 1-shot | [Download](https://drive.google.com/drive/folders/1fa6kADAvaxBSctPkQZd0p0kDslrdN63c?usp=drive_link) |
+| s31_2w5s | S3DIS | 1 | 2-way 5-shot | [Download](https://drive.google.com/drive/folders/10v35w90C_STOk93SmLlvjsc9sSbw1DlE?usp=drive_link) |
+| sc0_1w1s | ScanNet | 0 | 1-way 1-shot | [Download](https://drive.google.com/drive/folders/15_YB5t-P5BIwVh2D_yZMywQCSPeN7AvI?usp=drive_link) |
+| sc0_1w5s | ScanNet | 0 | 1-way 5-shot | [Download](https://drive.google.com/drive/folders/1kTgC1DTdwXOjTQczf9f0j-vIwmosP5zy?usp=drive_link) |
+| sc0_2w1s | ScanNet | 0 | 2-way 1-shot | [Download](https://drive.google.com/drive/folders/10J8jSORuhKQnC1GxJA-1jOdHUDOLqdfT?usp=drive_link) |
+| sc0_2w5s | ScanNet | 0 | 2-way 5-shot | [Download](https://drive.google.com/drive/folders/1Fhlw3vWO8jqfzHfGEhzo_oS8vJxsKwuO?usp=drive_link) |
+| sc1_1w1s | ScanNet | 1 | 1-way 1-shot | [Download](https://drive.google.com/drive/folders/1cGYEW2584u0upRdKh5VTXXXbm2YEp1KQ?usp=drive_link) |
+| sc1_1w5s | ScanNet | 1 | 1-way 5-shot | [Download](https://drive.google.com/drive/folders/1erLs1XsU5ep7yF6ppwfDk3Igj30vA0Vn?usp=drive_link) |
+| sc1_2w1s | ScanNet | 1 | 2-way 1-shot | [Download](https://drive.google.com/drive/folders/179fx-F61p2Q6Bd23T9i8GKXCANqFQiPb?usp=drive_link) |
+| sc1_2w5s | ScanNet | 1 | 2-way 5-shot | [Download](https://drive.google.com/drive/folders/1FJ7UgGa9NWJtJuwyPKJLBN2eoneyWF_i?usp=drive_link) |
 
 ## 📧 Contact
 
