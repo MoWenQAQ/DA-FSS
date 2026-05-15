@@ -1,10 +1,9 @@
 <p align="center">
   <h1 align="center">Rethinking Multimodal Few-Shot 3D Point Cloud Segmentation: From Fused Refinement to Decoupled Arbitration</h1>
   <p align="center">
-    <a href="#"><strong>Anonymous Author 1</strong></a>
+    <a href="#"><strong>Wentao Bian 1</strong></a>
     ·
-    <a href="#"><strong>Anonymous Author 2</strong></a>
-    ·
+    <a href="#"><strong>Fenglei Xu* 2</strong></a>
   </p>
   <h2 align="center"> Accepted at IJCAI-ECAI 2026 (<a href="https://anonymous.4open.science/r/DA-FSS-765F/">Paper</a>)</h2>
 </p>
@@ -17,10 +16,10 @@
 
 We identify a critical **"Plasticity-Stability Dilemma"** in existing "Fuse-then-Refine" multimodal paradigms, where semantic gradients dominate geometric adaptation. To address this, we present **DA-FSS**:
 
-- [cite_start]**Decoupled-experts Arbitration**: We propose a novel architecture that physically separates geometric adaptation (Plasticity) and semantic preservation (Stability) into **Parallel Experts**.
-- [cite_start]**Gradient Harmony**: We introduce the **Decoupled Alignment Module (DAM)**, utilizing Prototype Loss Regularization (PLR) and Decoupled Consistency Regularization (DCR) to align experts without propagating confusion noise.
-- [cite_start]**Smart Arbitration**: A **Stacked Arbitration Module (SAM)** is designed to effectively fuse the decoupled pathways using boundary-injected guidance, preventing the suppression of structural details.
-- [cite_start]**SOTA Performance**: DA-FSS outperforms the strong baseline (MM-FSS) on **S3DIS** and **ScanNet** datasets while using fewer parameters (-0.27M) and FLOPs (-0.30G).
+- **Decoupled-experts Arbitration**: We propose a novel architecture that physically separates geometric adaptation (Plasticity) and semantic preservation (Stability) into **Parallel Experts**.
+- **Gradient Harmony**: We introduce the **Decoupled Alignment Module (DAM)**, utilizing Prototype Loss Regularization (PLR) and Decoupled Consistency Regularization (DCR) to align experts without propagating confusion noise.
+- **Smart Arbitration**: A **Stacked Arbitration Module (SAM)** is designed to effectively fuse the decoupled pathways using boundary-injected guidance, preventing the suppression of structural details.
+- **SOTA Performance**: DA-FSS outperforms the strong baseline (MM-FSS) on **S3DIS** and **ScanNet** datasets while using fewer parameters (-0.27M) and FLOPs (-0.30G).
 
 ## 📝 Citation
 
@@ -29,8 +28,8 @@ If you find our code or paper useful, please cite:
 ```bibtex
 @inproceedings{dafss2026rethinking,
   title={Rethinking Multimodal Few-Shot 3D Point Cloud Segmentation: From Fused Refinement to Decoupled Arbitration},
-  author={Anonymous Authors},
-  booktitle={Under Review},
+  author={Bian,Wentao and Xu, Fenglei},
+  booktitle={IJCAI-ECAI},
   year={2026}
 }
 ```
@@ -159,3 +158,8 @@ Follow [COSeg visualization guide](https://github.com/ZhaochongAn/COSeg?tab=read
 ## 📧 Contact
 
 For any questions, feel free to reach out:
+
+- **Join in our Communication Group (WeChat)**:
+<div style="text-align: left;">
+    <img src="https://i.postimg.cc/G2bXnwRh/We-Chat.jpg" width="200"/>
+</div>
