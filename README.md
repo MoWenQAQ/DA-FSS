@@ -26,10 +26,10 @@ We identify a critical **"Plasticity-Stability Dilemma"** in existing "Fuse-then
 If you find our code or paper useful, please cite:
 
 ```bibtex
-@inproceedings{Bian2026rethinking,
+@inproceedings{bian2026rethinking,
   title={Rethinking Multimodal Few-Shot 3D Point Cloud Segmentation: From Fused Refinement to Decoupled Arbitration},
   author={Bian, Wentao and Xu, Fenglei},
-  booktitle={IJCAI-ECAI},
+  booktitle={Proceedings of the Thirty-Fifth International Joint Conference on Artificial Intelligence (IJCAI-ECAI 2026)},
   year={2026}
 }
 ```
