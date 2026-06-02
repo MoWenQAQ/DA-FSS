@@ -5,7 +5,7 @@
     ·
     <a href="#"><strong>Fenglei Xu* 2</strong></a>
   </p>
-  <h2 align="center"> Accepted at IJCAI-ECAI 2026 (<a href="https://anonymous.4open.science/r/DA-FSS-765F/">Paper</a>)</h2>
+  <h2 align="center"> Accepted at IJCAI-ECAI 2026 (<a href="https://arxiv.org/pdf/2601.01456">Paper</a>)</h2>
 </p>
 
 <p align="center">
