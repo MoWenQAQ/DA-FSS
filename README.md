@@ -27,11 +27,15 @@ If you find our code or paper useful, please cite:
 
 ```bibtex
 @inproceedings{bian2026rethinking,
-  title={Rethinking Multimodal Few-Shot 3D Point Cloud Segmentation: From Fused Refinement to Decoupled Arbitration},
-  author={Bian, Wentao and Xu, Fenglei},
-  booktitle={Proceedings of the Thirty-Fifth International Joint Conference on Artificial Intelligence (IJCAI-ECAI 2026)},
-  year={2026}
+  title     = {Rethinking Multimodal Few-Shot 3D Point Cloud Segmentation: From Fused Refinement to Decoupled Arbitration},
+  author    = {Bian, Wentao and Xu, Fenglei},
+  booktitle = {Proceedings of the Thirty-Fifth International Joint Conference on Artificial Intelligence (IJCAI-26)},
+  year      = {2026},
+  pages     = {917--925},
+  doi       = {10.24963/ijcai.2026/103}
 }
+
+
 ```
 
 ---
